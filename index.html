@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Maxson Stephen Mathew — Data Science Portfolio</title>
+  <meta name="description" content="Data Scientist with experience in ML, data engineering, and BI. Portfolio of projects, dashboards, and research." />
+  <meta property="og:title" content="Maxson Stephen Mathew — Portfolio" />
+  <meta property="og:description" content="ML, Data Engineering & BI projects — Tableau, Power BI, Python, GCP, Databricks." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/preview.png" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>📊</text></svg>">
+
+  <!-- Tailwind CSS via CDN (simple, no build step) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ["Inter", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Arial", "sans-serif"] },
+          boxShadow: { soft: "0 10px 30px rgba(2, 6, 23, 0.08)" },
+          colors: { brand: { DEFAULT: '#2563eb', light: '#60a5fa', dark: '#1e40af' } }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Smooth scroll */
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 dark:bg-slate-900 dark:text-slate-100">
+  <!-- Prefers-color-scheme init -->
+  <script>
+    (function(){
+      const stored = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (stored === 'dark' || (!stored && prefersDark)) document.documentElement.classList.add('dark');
+    })();
+  </script>
+
+  <!-- Nav -->
+  <header class="sticky top-0 z-50 backdrop-blur bg-white/70 dark:bg-slate-900/70 border-b border-slate-200/60 dark:border-slate-700">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#hero" class="font-semibold tracking-tight text-lg">Maxson <span class="text-brand">Stephen</span> Mathew</a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#about" class="hover:text-brand">About</a>
+        <a href="#skills" class="hover:text-brand">Skills</a>
+        <a href="#projects" class="hover:text-brand">Projects</a>
+        <a href="#experience" class="hover:text-brand">Experience</a>
+        <a href="#education" class="hover:text-brand">Education</a>
+        <a href="#contact" class="hover:text-brand">Contact</a>
+        <a href="assets/Resume.pdf" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-md bg-brand text-white shadow-soft" target="_blank" rel="noopener">Resume</a>
+        <button id="themeToggle" class="p-2 rounded-md border border-slate-200 dark:border-slate-700" aria-label="Toggle theme">🌙</button>
+      </nav>
+      <button id="menuBtn" class="md:hidden p-2 rounded-md border border-slate-200 dark:border-slate-700" aria-label="Open menu">☰</button>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-700">
+      <div class="max-w-6xl mx-auto px-4 py-3 grid gap-3 text-sm">
+        <a href="#about" class="hover:text-brand">About</a>
+        <a href="#skills" class="hover:text-brand">Skills</a>
+        <a href="#projects" class="hover:text-brand">Projects</a>
+        <a href="#experience" class="hover:text-brand">Experience</a>
+        <a href="#education" class="hover:text-brand">Education</a>
+        <a href="#contact" class="hover:text-brand">Contact</a>
+        <a href="assets/Resume.pdf" class="inline-flex w-max items-center gap-1 px-3 py-1.5 rounded-md bg-brand text-white" target="_blank" rel="noopener">Resume</a>
+        <button id="themeToggleM" class="p-2 w-max rounded-md border border-slate-200 dark:border-slate-700" aria-label="Toggle theme">🌙 Toggle theme</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero" class="relative overflow-hidden">
+    <div class="absolute inset-0 -z-10 bg-gradient-to-br from-brand/10 via-transparent to-fuchsia-300/20 dark:from-brand/20 dark:to-fuchsia-500/10"></div>
+    <div class="max-w-6xl mx-auto px-4 py-20 md:py-28 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Data Scientist & Analyst based in <span class="text-brand">Melbourne</span></h1>
+        <p class="mt-4 text-lg text-slate-700 dark:text-slate-300">I build machine learning models, data pipelines, and decision-support dashboards. Passionate about turning complex data into actionable insights.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#projects" class="px-5 py-3 rounded-xl bg-brand text-white shadow-soft">View Projects</a>
+          <a href="assets/Resume.pdf" target="_blank" rel="noopener" class="px-5 py-3 rounded-xl border border-slate-300 dark:border-slate-600">Download Resume</a>
+          <a href="https://www.linkedin.com/in/maxson-stephen-mathew-98a000188/" target="_blank" rel="noopener" class="px-5 py-3 rounded-xl border border-slate-300 dark:border-slate-600">LinkedIn</a>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="aspect-square rounded-3xl bg-white/70 dark:bg-slate-800/70 border border-slate-200 dark:border-slate-700 shadow-soft p-6 flex items-center justify-center">
+          <div class="text-center">
+            <div class="text-6xl">📈</div>
+            <p class="mt-4 text-sm text-slate-500 dark:text-slate-400">Python · SQL · Power BI · Tableau · TensorFlow · GCP · Databricks</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-2xl font-bold">About</h2>
+    <p class="mt-4 leading-relaxed text-slate-700 dark:text-slate-300">I'm Maxson Stephen Mathew, a Data Scientist with a Master of Data Science from the University of Melbourne. I have hands-on experience in machine learning, predictive modeling, and data engineering across Python, SQL, and cloud platforms (GCP, Databricks). I enjoy partnering with stakeholders to build models and dashboards that drive measurable impact.</p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-2xl font-bold">Skills</h2>
+    <div class="mt-6 grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div class="p-5 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/60">
+        <h3 class="font-semibold">Programming & Tools</h3>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Python (NumPy, Pandas, scikit-learn, TensorFlow, Keras), R, SQL, Git, Unix</p>
+      </div>
+      <div class="p-5 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/60">
+        <h3 class="font-semibold">Data Engineering & Mgmt</h3>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">ETL/ELT, Data Modeling (Star/NF), Power Query, Governance</p>
+      </div>
+      <div class="p-5 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/60">
+        <h3 class="font-semibold">Analytics & ML</h3>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Classification/Regression, Ensemble, LSTM, Bi-GRU, CNN, Clustering</p>
+      </div>
+      <div class="p-5 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/60">
+        <h3 class="font-semibold">NLP</h3>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Text Classification, Tokenization, Embeddings, SMOTE, Sentiment</p>
+      </div>
+      <div class="p-5 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/60">
+        <h3 class="font-semibold">Visualization</h3>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Power BI, Tableau, R Shiny, statistical charts & storytelling</p>
+      </div>
+      <div class="p-5 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/60">
+        <h3 class="font-semibold">Cloud & Platforms</h3>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">GCP (BigQuery), Databricks, Microsoft Fabric, SQL DBs</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-2xl font-bold">Projects</h2>
+    <div class="mt-6 grid md:grid-cols-2 gap-6">
+      <!-- Project 1 -->
+      <article class="group p-5 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/60 hover:shadow-soft transition">
+        <div class="aspect-video w-full rounded-xl bg-slate-200 dark:bg-slate-700 flex items-center justify-center text-3xl">🗺️</div>
+        <div class="mt-4">
+          <h3 class="font-semibold text-lg">Vulnerable Drivers in Victoria — Tableau Dashboard</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Interactive dashboard visualising road accident data with spatial filters and demographic insights for decision-making.</p>
+          <ul class="mt-2 text-sm list-disc list-inside text-slate-600 dark:text-slate-400">
+            <li>Tableau, spatial viz, YoY trends</li>
+          </ul>
+          <div class="mt-3 flex gap-3">
+            <a href="#" class="text-brand hover:underline" target="_blank" rel="noopener">View live</a>
+            <a href="#" class="text-brand hover:underline" target="_blank" rel="noopener">Case study</a>
+          </div>
+        </div>
+      </article>
+      <!-- Project 2 -->
+      <article class="group p-5 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/60 hover:shadow-soft transition">
+        <div class="aspect-video w-full rounded-xl bg-slate-200 dark:bg-slate-700 flex items-center justify-center text-3xl">🧪</div>
+        <div class="mt-4">
+          <h3 class="font-semibold text-lg">Predicting AMI via Troponin — MIMIC-IV</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">End-to-end ETL + ML pipeline with statistical testing, imputation, class balancing, and Random Forest modeling.</p>
+          <ul class="mt-2 text-sm list-disc list-inside text-slate-600 dark:text-slate-400">
+            <li>Python, scikit-learn, pandas</li>
+          </ul>
+          <div class="mt-3 flex gap-3">
+            <a href="#" class="text-brand hover:underline" target="_blank" rel="noopener">GitHub</a>
+            <a href="#" class="text-brand hover:underline" target="_blank" rel="noopener">Report</a>
+          </div>
+        </div>
+      </article>
+      <!-- Project 3 -->
+      <article class="group p-5 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/60 hover:shadow-soft transition">
+        <div class="aspect-video w-full rounded-xl bg-slate-200 dark:bg-slate-700 flex items-center justify-center text-3xl">🤖</div>
+        <div class="mt-4">
+          <h3 class="font-semibold text-lg">Human vs AI Text Classification — NLP</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Built ensemble models (LSTM, Bi-GRU, RF) to classify human-written vs AI-generated responses; achieved 95% accuracy.</p>
+          <ul class="mt-2 text-sm list-disc list-inside text-slate-600 dark:text-slate-400">
+            <li>TensorFlow, scikit-learn, SMOTE</li>
+          </ul>
+          <div class="mt-3 flex gap-3">
+            <a href="#" class="text-brand hover:underline" target="_blank" rel="noopener">GitHub</a>
+            <a href="#" class="text-brand hover:underline" target="_blank" rel="noopener">Blog</a>
+          </div>
+        </div>
+      </article>
+      <!-- Project 4 -->
+      <article class="group p-5 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/60 hover:shadow-soft transition">
+        <div class="aspect-video w-full rounded-xl bg-slate-200 dark:bg-slate-700 flex items-center justify-center text-3xl">🤟</div>
+        <div class="mt-4">
+          <h3 class="font-semibold text-lg">ASL → Text Conversion — CNN + Flask</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Real-time interpreter using OpenCV & Keras; deployed via Flask to convert hand gestures to text.</p>
+          <ul class="mt-2 text-sm list-disc list-inside text-slate-600 dark:text-slate-400">
+            <li>OpenCV, Keras, Flask</li>
+          </ul>
+          <div class="mt-3 flex gap-3">
+            <a href="#" class="text-brand hover:underline" target="_blank" rel="noopener">GitHub</a>
+            <a href="#" class="text-brand hover:underline" target="_blank" rel="noopener">Demo</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-2xl font-bold">Experience</h2>
+    <div class="mt-6 grid gap-6">
+      <div class="p-5 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/60">
+        <div class="flex items-center justify-between gap-4 flex-wrap">
+          <h3 class="font-semibold">Research Intern — HR, John Holland Group</h3>
+          <span class="text-sm text-slate-500">Feb 2024 – Oct 2024 · Melbourne</span>
+        </div>
+        <ul class="mt-3 text-sm space-y-1 text-slate-700 dark:text-slate-300">
+          <li>Partnered with HR stakeholders to design data reporting aligned with workforce strategy.</li>
+          <li>Built interactive Power BI dashboards; developed semantic models & predictive simulations (91% accuracy).</li>
+          <li>Contributed in Agile delivery within cross‑functional teams.</li>
+        </ul>
+      </div>
+      <div class="p-5 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/60">
+        <div class="flex items-center justify-between gap-4 flex-wrap">
+          <h3 class="font-semibold">Associate System Engineer — Tata Consultancy Services</h3>
+          <span class="text-sm text-slate-500">Aug 2021 – Dec 2022 · Bengaluru</span>
+        </div>
+        <ul class="mt-3 text-sm space-y-1 text-slate-700 dark:text-slate-300">
+          <li>Improved uptime by 95% via log monitoring & SQL-based error detection.</li>
+          <li>Reduced incident resolution time by 40% and enhanced release rollback by 25%.</li>
+          <li>Coordinated across Dev, QA, and business to streamline operations.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education & Certifications -->
+  <section id="education" class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-2xl font-bold">Education & Certifications</h2>
+    <div class="mt-6 grid gap-6 md:grid-cols-2">
+      <div class="p-5 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/60">
+        <h3 class="font-semibold">Master of Data Science</h3>
+        <p class="text-sm text-slate-600 dark:text-slate-400">University of Melbourne · Feb 2023 – Jul 2025</p>
+        <p class="mt-2 text-sm text-slate-700 dark:text-slate-300">Advanced ML, Deep Learning, Cloud Computing, DBMS, GIS.</p>
+      </div>
+      <div class="p-5 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/60">
+        <h3 class="font-semibold">Bachelor of Technology — Computer Science</h3>
+        <p class="text-sm text-slate-600 dark:text-slate-400">GGSIPU, Delhi · Aug 2017 – Jul 2021</p>
+        <p class="mt-2 text-sm text-slate-700 dark:text-slate-300">ASL→Text app: CNN + Flask deployment.</p>
+      </div>
+      <div class="p-5 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/60 md:col-span-2">
+        <h3 class="font-semibold">Certifications</h3>
+        <ul class="mt-2 text-sm grid sm:grid-cols-2 gap-2 text-slate-700 dark:text-slate-300">
+          <li>• Deloitte Australia — Data Analytics Job Simulation (Forage)</li>
+          <li>• AIG — Actuarial Analyst Job Simulation (Forage)</li>
+          <li>• ML, Data Science & Deep Learning with Python (Udemy)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-2xl font-bold">Contact</h2>
+    <div class="mt-6 grid md:grid-cols-2 gap-6">
+      <div class="p-5 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/60">
+        <p class="text-sm text-slate-700 dark:text-slate-300">Want to collaborate or have a role that fits? Reach out via email or LinkedIn.</p>
+        <div class="mt-4 space-y-2 text-sm">
+          <p>Email: <a class="text-brand hover:underline" href="mailto:msmmj6499@gmail.com">msmmj6499@gmail.com</a></p>
+          <p>LinkedIn: <a class="text-brand hover:underline" href="https://www.linkedin.com/in/maxson-stephen-mathew-98a000188/" target="_blank" rel="noopener">/in/maxson-stephen-mathew-98a000188</a></p>
+          <p>Location: Melbourne, Australia</p>
+        </div>
+      </div>
+      <form class="p-5 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/60" action="https://formspree.io/f/your-id" method="POST">
+        <div class="grid gap-3">
+          <input class="px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-600 bg-white/80 dark:bg-slate-900/40" name="name" placeholder="Your name" required>
+          <input class="px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-600 bg-white/80 dark:bg-slate-900/40" type="email" name="email" placeholder="Your email" required>
+          <textarea class="px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-600 bg-white/80 dark:bg-slate-900/40" name="message" rows="4" placeholder="Your message"></textarea>
+          <button class="px-4 py-2 rounded-lg bg-brand text-white w-max">Send</button>
+          <p class="text-xs text-slate-500">Tip: Replace <code>your-id</code> in the form action with your Formspree endpoint, or remove this form.</p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-200 dark:border-slate-700 py-10">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+      <p>© <span id="year"></span> Maxson Stephen Mathew. All rights reserved.</p>
+      <div class="flex items-center gap-4">
+        <a href="#hero" class="hover:text-brand">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Theme toggle
+    function toggleTheme(){
+      const isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    }
+    document.getElementById('themeToggle').addEventListener('click', toggleTheme);
+    document.getElementById('themeToggleM').addEventListener('click', toggleTheme);
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+  </script>
+</body>
+</html>
