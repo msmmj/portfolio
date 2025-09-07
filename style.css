@@ -232,7 +232,7 @@ section {
 
 @media (min-width: 1024px) {
   .projects-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -301,6 +301,16 @@ section {
   text-decoration: none;
   transition: background-color 0.3s ease;
   align-self: center;
+}
+/* Add spacing for multiple buttons inside project cards */
+.project-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.project-links .project-btn {
+  margin-top: 1rem; /* smaller gap than the original */
 }
 
 .project-btn:hover {
