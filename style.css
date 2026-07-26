@@ -650,3 +650,39 @@ section {
     width: 90% !important;
   }
 }
+/* Featured project badge */
+.project-card.featured {
+  border: 2px solid #2563eb;
+  position: relative;
+}
+
+.featured-badge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background: #2563eb;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  z-index: 2;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.4);
+  letter-spacing: 0.02em;
+}
+
+.project-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.75rem 0;
+}
+
+.stack-tag {
+  background: rgba(37, 99, 235, 0.1);
+  color: #2563eb;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: 0.5rem;
+}

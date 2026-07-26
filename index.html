@@ -122,7 +122,55 @@
 
     <!-- Projects Grid -->
     <div class="projects-grid">
-      <!-- Project 1  -->
+       <!-- Featured Project: The Basis Point: Project 1 -->
+<article class="project-card featured">
+  <div class="project-thumb" style="position: relative;">
+    <span class="featured-badge">⭐ Featured — Data Engineering</span>
+    <img src="assets/basis-point-dashboard.png" alt="The Basis Point — Australian Bank Rate & Inflation Dashboard">
+  </div>
+  <div class="project-content">
+    <h3 class="project-title">The Basis Point — Live Bank Rate & Inflation Analytics Pipeline</h3>
+    <div class="project-stack">
+      <span class="stack-tag">Python</span>
+      <span class="stack-tag">dbt</span>
+      <span class="stack-tag">Apache Airflow</span>
+      <span class="stack-tag">Docker</span>
+      <span class="stack-tag">PostgreSQL</span>
+      <span class="stack-tag">Streamlit</span>
+      <span class="stack-tag">GitHub Actions CI/CD</span>
+    </div>
+    <ul class="project-description">
+      <li>Built an end-to-end data pipeline integrating the <strong>ABS Data API</strong> (macroeconomic inflation data) with the <strong>Consumer Data Right (Open Banking) APIs</strong> of 4 major Australian banks — ANZ, Westpac, CBA, and Suncorp.</li>
+      <li>Engineered <strong>automatic per-bank API version negotiation</strong> to handle inconsistent, undocumented versioning across live banking endpoints — parsing each bank's own error responses rather than hardcoding configuration.</li>
+      <li>Modeled and tested data with <strong>dbt</strong> (staging + mart layers, <strong>16 automated data tests</strong>) on Supabase Postgres, using append-only snapshots to track real rate movement over time.</li>
+      <li>Orchestrated with a <strong>Dockerized Apache Airflow</strong> DAG and automated <strong>CI/CD via GitHub Actions</strong> (lint, format-check, and test on every push).</li>
+      <li>Delivered an interactive <strong>Streamlit dashboard</strong> that auto-generates insights identifying the most competitive bank per product category in real time.</li>
+    </ul>
+    <p class="project-description"><strong>Impact:</strong> mirrors the same rate-benchmarking function used commercially by comparison platforms like Canstar and Finder — built independently, end-to-end, on free infrastructure.</p>
+    <div class="project-links">
+      <a href="https://github.com/msmmj/marketpulse" target="_blank" class="project-btn">View Project</a>
+      <!-- Add a second button here once deployed publicly, e.g.:
+      <a href="https://your-app.streamlit.app" target="_blank" class="project-btn">Live Dashboard</a> -->
+    </div>
+  </div>
+</article>
+     <!-- Project 2 -->
+      <article class="project-card">
+        <div class="project-thumb">
+          <img src="assets/project1.png" alt="Workforce Management SNA">
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Workforce Management with Social Network Analysis & Agent Based Modeling</h3>
+          <ul class="project-description">
+            <li>Applied SNA and Agent-Based Modeling to analyze employee turnover at John Holland Group.</li>
+            <li>Identified key influencers via centrality metrics (degree, eigenvector, closeness, betweenness).</li>
+            <li>Developed ABM simulation to predict disruptions from key employee exits.</li>
+            <strong>Impact:</strong> Provided HR with data-driven insights to forecast workforce disruptions, enabling proactive retention policies.
+          </ul>
+          <a href="https://github.com/WhYC9K8/MAST90107_Project" target="_blank" class="project-btn">View Project</a>
+        </div>
+      </article> 
+     <!-- Project 3  -->
       <article class="project-card">
         <div class="project-thumb">
           <img src="assets/retail.png" alt="Victoria Retail Turnover Analysis (2023–2025)">
@@ -140,7 +188,7 @@
           </div>
         </div>
       </article>
-      <!-- Project 2  -->
+      <!-- Project 4  -->
       <article class="project-card">
         <div class="project-thumb">
           <img src="assets/RAG.png" alt="AI-Powered Invoice Data Extractor">
@@ -159,43 +207,6 @@
           </div>
         </div>
       </article>
-      <!-- Project 3  -->
-      <article class="project-card">
-        <div class="project-thumb">
-          <img src="assets/ny-taxi.png" alt="NY Taxi Operation Overview Dashboard">
-        </div>
-        <div class="project-content">
-          <h3 class="project-title">NY Taxi Operation Overview Dashboard</h3>
-          <ul class="project-description">
-            <li>Developed an end-to-end data pipeline using <strong>Microsoft Fabric Lakehouse</strong> for seamless ingestion.</li>
-            <li>Performed EDA with <strong>Python (PySpark, Pandas, Matplotlib)</strong> to uncover trends in trip distance, fares, and durations.</li>
-            <li>Designed an interactive <strong>Power BI dashboard</strong> featuring KPIs, revenue trends, and pickup/drop-off heatmaps.</li>
-            <strong>Impact:</strong> Delivered actionable insights on trip patterns, helping optimize operational efficiency.
-          </ul>
-          <div class="project-links">
-            <a href="https://github.com/msmmj/NY-taxi-Operation-Overview-Dashboard" target="_blank" class="project-btn">View Project</a>
-            <a href="https://www.youtube.com/watch?v=MpHMEV7gpwI" target="_blank" class="project-btn">YouTube</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Project 4 -->
-      <article class="project-card">
-        <div class="project-thumb">
-          <img src="assets/project1.png" alt="Workforce Management SNA">
-        </div>
-        <div class="project-content">
-          <h3 class="project-title">Workforce Management with Social Network Analysis & Agent Based Modeling</h3>
-          <ul class="project-description">
-            <li>Applied SNA and Agent-Based Modeling to analyze employee turnover at John Holland Group.</li>
-            <li>Identified key influencers via centrality metrics (degree, eigenvector, closeness, betweenness).</li>
-            <li>Developed ABM simulation to predict disruptions from key employee exits.</li>
-            <strong>Impact:</strong> Provided HR with data-driven insights to forecast workforce disruptions, enabling proactive retention policies.
-          </ul>
-          <a href="https://github.com/WhYC9K8/MAST90107_Project" target="_blank" class="project-btn">View Project</a>
-        </div>
-      </article>
-
       <!-- Project 5 -->
       <article class="project-card">
         <div class="project-thumb">
